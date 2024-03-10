@@ -1,0 +1,134 @@
+Script started on 2024-03-10 07:04:55-04:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="152" LINES="40"]
+                                                                                                                                                        ]0;kali@kali: ~[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[7m[4m[32msudo[24m[39m[7m [7m[32msystemctl[39m[7m stop nginx [1m[7m[34m&&[0m[39m[7m [7m[4m[32msudo[24m[39m[7m [7m[32msystemctl[39m[7m disable [7m[4mnginx[27m[24m[57D[27m[4m[32ms[27m[4m[32mu[27m[4m[32md[27m[4m[32mo[24m[39m[27m [27m[32ms[27m[32my[27m[32ms[27m[32mt[27m[32me[27m[32mm[27m[32mc[27m[32mt[27m[32ml[39m[27m [27ms[27mt[27mo[27mp[27m [27mn[27mg[27mi[27mn[27mx[27m [27m[1m[34m&[27m[1m[34m&[0m[39m[27m [27m[4m[32ms[27m[4m[32mu[27m[4m[32md[27m[4m[32mo[24m[39m[27m [27m[32ms[27m[32my[27m[32ms[27m[32mt[27m[32me[27m[32mm[27m[32mc[27m[32mt[27m[32ml[39m[27m [27md[27mi[27ms[27ma[27mb[27ml[27me[27m [27m[4mn[27m[4mg[27m[4mi[27m[4mn[27m[4mx[24m[?1l>[?2004l[24mn[24mg[24mi[24mn[24mx
+[sudo] password for kali: 
+Synchronizing state of nginx.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install disable nginx
+                                                                                                                                                        ]0;kali@kali: ~
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[7m[4m[32msudo[24m[39m[7m [7m[32mmcedit[39m[7m [7m[4m/lib/systemd/system/nginx-codeby.service[27m[24m[52D[27m[4m[32ms[27m[4m[32mu[27m[4m[32md[27m[4m[32mo[24m[39m[27m [27m[32mm[27m[32mc[27m[32me[27m[32md[27m[32mi[27m[32mt[39m[27m [27m[4m/[27m[4ml[27m[4mi[27m[4mb[27m[4m/[27m[4ms[27m[4my[27m[4ms[27m[4mt[27m[4me[27m[4mm[27m[4md[27m[4m/[27m[4ms[27m[4my[27m[4ms[27m[4mt[27m[4me[27m[4mm[27m[4m/[27m[4mn[27m[4mg[27m[4mi[27m[4mn[27m[4mx[27m[4m-[27m[4mc[27m[4mo[27m[4md[27m[4me[27m[4mb[27m[4my[27m[4m.[27m[4ms[27m[4me[27m[4mr[27m[4mv[27m[4mi[27m[4mc[27m[4me[24m[?1l>[?2004l
+[?1049h[22;0;0t[1;40r[4l[40;1H(B[m[37m[40m(B[m[39;49m[K[?1049l[23;0;0t[?1001s[?1002h[?1006h[?2004h[?1049h[22;0;0t[1;40r[4l[?1h=[?1h=(B[m[39m[49m[1;40r[H[2J[1;1H[30m[46m/lib/systemd/system/nginx-codeby.service   [----]  0 L:[  1+18  19/ 19] *(603 / 603b) <EOF>                                                       [*][X][2;1H[93m[44m[Unit][37m[K
+[36mDescription[91m=[96mA high performance web server and a reverse proxy server[37m[K
+[36mDocumentation[91m=[96mman:nginx(8)[37m[K
+[36mAfter[91m=[96mnetwork-online.target remote-fs.target nss-lookup.target[37m[K
+[36mWants[91m=[96mnetwork-online.target[37m[K
+[K
+[93m[Service][37m[K
+[36mType[91m=[96mforking[37m[K
+[36mPIDFile[91m=[96m/run/nginx.pid[37m[K
+[36mExecStartPre[91m=[96m/usr/sbin/nginx -t -q -g 'daemon on; master_process on;'[37m[K
+[36mExecStart[91m=[96m/usr/sbin/nginx -g 'daemon on; master_process on;'[37m[K
+[36mExecReload[91m=[96m/usr/sbin/nginx -g 'daemon on; master_process on;' -s reload[37m[K
+[36mExecStop[91m=[96m-/sbin/start-stop-daemon --quiet --stop --retry QUIT/5 --pidfile /run/nginx.pid[37m[K
+[36mTimeoutStopSec[91m=[96m5[37m[K
+[36mKillMode[91m=[96mmixed[37m[K
+[K
+[93m[Install][37m[K
+[36mWantedBy[91m=[96mmulti-user.target[37m[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[97m[40m 1[30m[46mHelp         [97m[40m 2[30m[46mSave         [97m[40m 3[30m[46mMark         [97m[40m 4[30m[46mReplac       [97m[40m 5[30m[46mCopy          [97m[40m 6[30m[46mMove         [97m[40m 7[30m[46mSearch       [97m[40m 8[30m[46mDelete       [97m[40m 9[30m[46mPullDn       [97m[40m10[30m[46mQuit[K[20;1H[17;43H[47m                                                                   [18;43H ┌──────────────────────────[34m Save file [30m──────────────────────────┐ [90m[40m  [19;43H[30m[47m │ Confirm save file: "/lib/systemd/system/nginx-codeby.service" │ [90m[40m  [20;43H[30m[47m ├───────────────────────────────────────────────────────────────┤ [90m[40m  [21;43H[30m[47m │                     [46m[ [34mS[30mave ][47m  [ [34mC[30mancel ]                      │ [90m[40m  [22;43H[30m[47m └───────────────────────────────────────────────────────────────┘ [90m[40m  [23;43H[30m[47m                                                                   [90m[40m  [24;45H                                                                   [21;68H[17;43H[37m[44m[K[18;43H[K[19;43H[K[20;43H[K[21;43H[K[22;43H[K[23;43H[K[24;45H[K[20;1H
+(mcedit:33700): GLib-[1;35mCRITICAL[0m **: [34m07:05:24.501[0m: g_string_free: assertion 'string != NULL' failed
+[1;1H[39m[49m[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K[1;152H[?2004l[?1006l[?1002l[?1001r[?1l>[40;1H(B[m[39;49m[K[?1049l[23;0;0t[39;49m
+                                                                                                                                                        ]0;kali@kali: ~
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[7m[4m[32msudo[24m[39m[7m [7m[32msystemctl[39m[7m enable nginx-codeby[27m[34D[27m[4m[32ms[27m[4m[32mu[27m[4m[32md[27m[4m[32mo[24m[39m[27m [27m[32ms[27m[32my[27m[32ms[27m[32mt[27m[32me[27m[32mm[27m[32mc[27m[32mt[27m[32ml[39m[27m [27me[27mn[27ma[27mb[27ml[27me[27m [27mn[27mg[27mi[27mn[27mx[27m-[27mc[27mo[27md[27me[27mb[27my[?1l>[?2004l
+Created symlink /etc/systemd/system/multi-user.target.wants/nginx-codeby.service → /lib/systemd/system/nginx-codeby.service.
+                                                                                                                                                        ]0;kali@kali: ~
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[4ms[24m[4ms[24m[38;2;153;153;153mudo systemctl enable nginx-codeby[39m[33D[24m[32ms[32mu[39m[1m[31ms[1m[31mu[1m[31md[0m[39m[0m[4m[32ms[0m[4m[32mu[0m[4m[32md[4m[32mo[24m[39m[39m [39m[4ms[24m[24m[1m[31ms[1m[31my[0m[39m[1m[31my[1m[31ms[0m[39m[1m[31ms[1m[31mt[0m[39m[1m[31mt[1m[31me[0m[39m[1m[31me[1m[31mm[0m[39m[1m[31mm[1m[31mc[0m[39m[1m[31mc[1m[31mt[0m[39m[8D[0m[32ms[0m[32my[0m[32ms[0m[32mt[0m[32me[0m[32mm[0m[32mc[0m[32mt[32ml[39m[39m [39me[39mn[39ma[39mb[39ml[39me[39m [39mn[39mg[39mi[39mn[39mx[39m-[39mc[39mo[39md[39me[39mb[39my[P[13C [14D[P[13C [14D[P[13C [14D[P[13C [14D[P[13C [14D[P[13C [14Ds nginx-codeby[13Dt nginx-codeby[13Da nginx-codeby[13Dt nginx-codeby[13Du nginx-codeby[13Ds nginx-codeby[13D[?1l>[?2004l
+[?1h=○ nginx-codeby.service - A high performance web server and a reverse proxy server[m
+     Loaded: loaded (/lib/systemd/system/nginx-codeby.service; enabled; vendor preset: disabled)[m
+     Active: inactive (dead)[m
+       Docs: man:nginx(8)[m
+[m
+Mar 10 07:03:57 kali systemd[1]: Starting A high performance web server and a reverse proxy server...[m
+Mar 10 07:03:57 kali systemd[1]: Started A high performance web server and a reverse proxy server.[m
+Mar 10 07:04:10 kali systemd[1]: Stopping A high performance web server and a reverse proxy server...[m
+Mar 10 07:04:10 kali systemd[1]: nginx-codeby.service: Deactivated successfully.[m
+Mar 10 07:04:10 kali systemd[1]: Stopped A high performance web server and a reverse proxy server.[m
+[K[?1l>                                                                                                                                                        ]0;kali@kali: ~
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[4m[32msudo[24m[39m [32msystemctl[39m status nginx-codeby[1C[P[13C [14D[P[13C [14D[P[13C [14D[P[13C [14Da nginx-codeby[13Dr nginx-codeby[13Dt nginx-codeby[13D[?1l>[?2004l
+                                                                                                                                                        ]0;kali@kali: ~
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[4m[32msudo[24m[39m [32msystemctl[39m start nginx-codeby[15Dtus nginx-codeby[?1l>[?2004l
+[?1h=[0;1;32m●[0m nginx-codeby.service - A high performance web server and a reverse proxy server[m
+     Loaded: loaded (/lib/systemd/system/nginx-codeby.service; enabled; vendor preset: disabled)[m
+     Active: [0;1;32mactive (running)[0m since Sun 2024-03-10 07:05:57 EDT; 4s ago[m
+       Docs: man:nginx(8)[m
+    Process: 33953 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (code=exited, status=0/SUCCESS)[m
+    Process: 33954 ExecStart=/usr/sbin/nginx -g daemon on; master_process on; (code=exited, status=0/SUCCESS)[m
+   Main PID: 33955 (nginx)[m
+      Tasks: 3 (limit: 4711)[m
+     Memory: 3.5M[m
+        CPU: 39ms[m
+     CGroup: /system.slice/nginx-codeby.service[m
+             ├─[0;38;5;245m33955 "nginx: master process /usr/sbin/nginx -g daemon on; master_process on;"[0m[m
+             ├─[0;38;5;245m33956 "nginx: worker process"[0m[m
+             └─[0;38;5;245m33957 "nginx: worker process"[0m[m
+[m
+Mar 10 07:05:57 kali systemd[1]: Starting A high performance web server and a reverse proxy server...[m
+Mar 10 07:05:57 kali systemd[1]: Started A high performance web server and a reverse proxy server.[m
+[K[?1l>                                                                                                                                                        ]0;kali@kali: ~
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[4me[24m[4me[24m[38;2;153;153;153mxit[39m[24m[32me[32mx[39m[1m[31me[1m[31mx[1m[31mi[0m[39m[0m[32me[0m[32mx[0m[32mi[32mt[39m[?1l>[?2004l
+
+Script done on 2024-03-10 07:06:07-04:00 [COMMAND_EXIT_CODE="0"]
