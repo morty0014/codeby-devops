@@ -1,0 +1,124 @@
+Script started on 2024-03-09 23:44:08+03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="152" LINES="40"]
+[?2004h]0;kali@xxxxxx: ~[01;32mkali@xxxxxx[00m:[01;34m~[00m$ ps -e
+[?2004l    PID TTY          TIME CMD
+      1 ?        00:00:13 systemd
+      2 ?        00:00:00 kthreadd
+      3 ?        00:00:00 rcu_gp
+      4 ?        00:00:00 rcu_par_gp
+      6 ?        00:00:00 kworker/0:0H-events_highpri
+      9 ?        00:00:00 mm_percpu_wq
+     10 ?        00:00:00 rcu_tasks_rude_
+     11 ?        00:00:00 rcu_tasks_trace
+     12 ?        00:00:00 ksoftirqd/0
+     13 ?        00:00:15 rcu_sched
+     14 ?        00:00:06 migration/0
+     15 ?        00:00:00 cpuhp/0
+     16 ?        00:00:00 cpuhp/1
+     17 ?        00:00:06 migration/1
+     18 ?        00:00:00 ksoftirqd/1
+     20 ?        00:00:00 kworker/1:0H-events_highpri
+     21 ?        00:00:00 cpuhp/2
+     22 ?        00:00:06 migration/2
+     23 ?        00:00:00 ksoftirqd/2
+     25 ?        00:00:00 kworker/2:0H-kblockd
+     26 ?        00:00:00 cpuhp/3
+     27 ?        00:00:06 migration/3
+     28 ?        00:00:00 ksoftirqd/3
+     30 ?        00:00:00 kworker/3:0H-events_highpri
+     35 ?        00:00:00 kdevtmpfs
+     36 ?        00:00:00 netns
+     37 ?        00:00:00 kauditd
+     38 ?        00:00:02 khungtaskd
+     39 ?        00:00:00 oom_reaper
+     40 ?        00:00:00 writeback
+     41 ?        00:01:02 kcompactd0
+     42 ?        00:00:00 ksmd
+     43 ?        00:00:07 khugepaged
+     61 ?        00:00:00 kintegrityd
+     62 ?        00:00:00 kblockd
+     63 ?        00:00:00 blkcg_punt_bio
+     64 ?        00:00:00 edac-poller
+     65 ?        00:00:00 devfreq_wq
+     66 ?        00:00:04 kworker/0:1H-kblockd
+     67 ?        00:00:00 kswapd0
+     68 ?        00:00:00 kthrotld
+     69 ?        00:00:00 acpi_thermal_pm
+     70 ?        00:00:00 ipv6_addrconf
+     79 ?        00:00:00 kstrp
+     83 ?        00:00:00 zswap-shrink
+     84 ?        00:00:00 kworker/u9:0
+    108 ?        00:00:02 kworker/3:1H-kblockd
+    139 ?        00:00:00 ata_sff
+    140 ?        00:00:00 scsi_eh_0
+    141 ?        00:00:00 scsi_tmf_0
+    142 ?        00:00:00 scsi_eh_1
+    143 ?        00:00:00 scsi_tmf_1
+    146 ?        00:00:06 kworker/1:1H-kblockd
+    149 ?        00:00:04 kworker/2:1H-kblockd
+    169 ?        00:00:18 jbd2/vda1-8
+    170 ?        00:00:00 ext4-rsv-conver
+    205 ?        00:01:45 systemd-journal
+    241 ?        00:00:03 systemd-udevd
+    301 ?        00:00:04 systemd-timesyn
+    318 ?        00:00:00 ttm_swap
+    362 ?        00:00:18 cron
+    363 ?        00:00:00 dbus-daemon
+    365 ?        00:00:19 qemu-ga
+    366 ?        00:00:28 rsyslogd
+    370 ?        00:00:03 systemd-logind
+    382 ?        00:00:00 cryptd
+    457 ?        00:00:00 nfit
+    581 ?        00:11:36 fail2ban-server
+    582 ?        00:45:04 containerd
+    583 tty1     00:00:00 agetty
+    584 ttyS0    00:00:00 agetty
+    585 ?        00:00:00 sshd
+ 188234 ?        00:05:06 dockerd
+ 246626 ?        00:00:02 docker-proxy
+ 246640 ?        00:00:02 docker-proxy
+ 246655 ?        00:00:02 docker-proxy
+ 246671 ?        00:01:32 containerd-shim
+ 246692 ?        00:00:00 run.sh
+ 246755 ?        00:00:00 starter
+ 246759 ?        00:00:00 charon
+ 272167 ?        00:00:10 kworker/0:3-cgroup_destroy
+ 279970 ?        00:00:00 kworker/0:0-events
+ 280957 ?        00:00:01 kworker/3:2-mm_percpu_wq
+ 282705 ?        00:00:00 systemd
+ 282706 ?        00:00:00 (sd-pam)
+ 282711 ?        00:00:00 kworker/2:1-cgroup_destroy
+ 282721 ?        00:00:01 kworker/1:0-events
+ 282809 ?        00:00:00 kworker/u8:3-events_unbound
+ 282846 ?        00:00:00 kworker/u8:1-flush-254:0
+ 282900 ?        00:00:00 kworker/2:0-cgroup_destroy
+ 282906 ?        00:00:00 kworker/3:0-events
+ 282930 ?        00:00:00 kworker/1:2-ata_sff
+ 282932 ?        00:00:00 kworker/u8:0-flush-254:0
+ 282936 ?        00:00:00 kworker/2:2-events
+ 282958 ?        00:00:00 kworker/1:1-ata_sff
+ 282961 ?        00:00:00 kworker/2:3
+ 282962 ?        00:00:00 sshd
+ 282964 ?        00:00:00 kworker/u8:2-events_unbound
+ 282969 ?        00:00:00 sshd
+ 282970 pts/0    00:00:00 bash
+ 282974 pts/0    00:00:00 script
+ 282975 pts/1    00:00:00 bash
+ 282977 pts/1    00:00:00 ps
+[?2004h]0;kali@xxxxxx: ~[01;32mkali@xxxxxx[00m:[01;34m~[00m$ ps -u kali
+[?2004l    PID TTY          TIME CMD
+ 282705 ?        00:00:00 systemd
+ 282706 ?        00:00:00 (sd-pam)
+ 282969 ?        00:00:00 sshd
+ 282970 pts/0    00:00:00 bash
+ 282974 pts/0    00:00:00 script
+ 282975 pts/1    00:00:00 bash
+ 282978 pts/1    00:00:00 ps
+[?2004h]0;kali@xxxxxx: ~[01;32mkali@xxxxxx[00m:[01;34m~[00m$ top &
+[?2004l[1] 282979
+[?2004h]0;kali@xxxxxx: ~[01;32mkali@xxxxxx[00m:[01;34m~[00m$ [?1l>kill -9 282979
+[?2004l
+[1]+  Stopped                 top
+[?2004h]0;kali@xxxxxx: ~[01;32mkali@xxxxxx[00m:[01;34m~[00m$ exit
+[?2004lexit
+
+Script done on 2024-03-09 23:44:42+03:00 [COMMAND_EXIT_CODE="0"]
