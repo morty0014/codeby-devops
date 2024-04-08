@@ -1,0 +1,30 @@
+---
+# This playbook deploys the application stack in this VM.
+
+- hosts: all
+  remote_user: root
+  become: yes
+  become_method: sudo
+  tasks:
+    - name: Print environment
+      ansible.builtin.debug:
+        msg: "This host is in '{{ ENV }}' environment"
+
+    - name: Apt-get update
+      ansible.builtin.apt:
+        update_cache: yes
+
+    - name: Install wget, htop, nginx
+      ansible.builtin.apt:
+        pkg:
+          - wget
+          - htop
+          - nginx
+        state: present
+
+    - name: Start and enable nginx service
+      ansible.builtin.service:
+        name: nginx
+        state: started
+        enabled: yes
+      tags: nginx
