@@ -1,0 +1,22 @@
+- name: Install apache (httpd)
+  ansible.builtin.yum:
+    name: httpd
+    state: present
+
+- name: started apache (httpd)
+  ansible.builtin.service:
+    name: httpd
+    state: started
+    enabled: yes
+
+
+- name: Copy apache (httpd) configuration for wordpress
+  ansible.builtin.template:
+    src: httpd.conf.j2
+    dest: "/etc/httpd/conf.d/httpd.conf"
+#  notify: restart httpd (apache)
+
+- name: restart httpd (apache)
+  ansible.builtin.service:
+    name: httpd
+    state: restarted
