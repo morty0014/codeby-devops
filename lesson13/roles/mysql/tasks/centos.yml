@@ -1,0 +1,41 @@
+- name: Install Centos DB
+  ansible.builtin.yum:
+    name: "{{ item }}"
+    update_cache: True
+    state: present
+  with_items:
+    - mysql-server
+    - python3-PyMySQL
+
+- name: Start Mysql Service
+  ansible.builtin.service:
+    name: mysqld
+    state: started
+    enabled: yes
+
+- name: Create Mysql configuration file
+  ansible.builtin.template:
+    src: my.cnf.j2
+    dest: "/etc/my.cnf"
+
+- name: restart mysqld service
+  ansible.builtin.service:
+    name: mysqld
+    state: restarted
+
+- name: Sets the root password
+  ansible.builtin.mysql_user:
+    name: root
+    password: "{{ mysql_root_password }}"
+    login_unix_socket: /var/lib/mysql/mysql.sock
+
+- name: Removes all anonymous user accounts
+  ansible.builtin.mysql_user:
+    name: ''
+    state: absent
+    login_user: root
+    login_password: "{{ mysql_root_password }}"
+
+
+
+ 

@@ -1,0 +1,19 @@
+
+- name: Disable default pool
+  ansible.builtin.command: mv /etc/php/8.2/fpm/pool.d/www.conf /etc/php/8.2/fpm/pool.d/www.disabled creates=/etc/php/8.2/fpm/pool.d/www.disabled
+  when: ansible_facts['os_family']|lower == 'ubuntu'
+
+
+- name: Copy php-fpm configuration
+  ansible.builtin.template:
+    src: wordpress_ubuntu.conf
+    dest: "/etc/php/8.2/fpm/pool.d/"
+  when: ansible_facts['os_family']|lower == 'ubuntu'
+
+
+- name: Start php8.2-fpm Service
+  ansible.builtin.service:
+    name: php8.2-fpm
+    state: started
+    enabled: yes
+  when: ansible_facts['os_family']|lower == 'ubuntu'

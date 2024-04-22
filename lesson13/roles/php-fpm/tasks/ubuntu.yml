@@ -1,0 +1,22 @@
+- name: Install Ubuntu PHP-FPM
+  ansible.builtin.apt:
+    pkg:
+    - php
+    - php-fpm
+    - php-mysql
+    - php-mbstring
+    - php-xml
+    - php-curl
+    update_cache: True
+    state: present
+
+- name: Start PHP-FPM Service
+  ansible.builtin.service:
+    name: php8.2-fpm
+    state: started
+    enabled: yes
+
+- name: restart php-fpm
+  ansible.builtin.service:
+    name: php8.2-fpm
+    state: restarted

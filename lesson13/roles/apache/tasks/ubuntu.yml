@@ -1,0 +1,27 @@
+- name: install apache2
+  ansible.builtin.apt: 
+    name: apache2
+    update_cache: yes
+    state: latest
+
+- name: enabled mod_rewrite
+  ansible.builtin.apache2_module:
+    name: rewrite 
+    state: present
+
+- name: started apache2
+  ansible.builtin.service:
+    name: apache2
+    state: started
+    enabled: yes
+
+- name: Copy apache2 configuration for wordpress
+  ansible.builtin.template:
+    src: apache.conf.j2
+    dest: "/etc/apache2/sites-available/000-default.conf"
+#  notify: restart apache2
+
+- name: restart apache2
+  ansible.builtin.service:
+    name: apache2
+    state: restarted

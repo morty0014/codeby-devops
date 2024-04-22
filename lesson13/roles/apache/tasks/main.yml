@@ -1,0 +1,7 @@
+- name: Install the correct nginx for Centos
+  import_tasks: centos.yml
+  when: ansible_facts['distribution']|lower == 'centos'
+
+- name: Install the correct nginx for Ubuntu
+  import_tasks: ubuntu.yml
+  when: ansible_facts['distribution']|lower == 'ubuntu'

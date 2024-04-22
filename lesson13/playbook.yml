@@ -1,0 +1,14 @@
+---
+
+
+- name: Install WordPress, MySQL, Nginx, and PHP-FPM
+  hosts: all
+  become_user: root
+  become: yes
+  become_method: sudo
+
+  roles:
+    - {role: mysql, tags: mysql}
+    - {role: apache, tags: apache}
+    - {role: php-fpm, tags: php}
+    - {role: wordpress, tags: wordpress}
