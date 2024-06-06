@@ -41,7 +41,7 @@ spec:
     - ReadWriteOnce
   storageClassName: storage
   local:
-    path: /tmp/data_node1
+    path: /tmp/data_node2
   nodeAffinity:
     required:
       nodeSelectorTerms:
