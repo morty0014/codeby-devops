@@ -1,0 +1,52 @@
+# Создать StorageClass для хранилища типа local
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: storage
+provisioner: kubernetes.io/no-provisioner
+volumeBindingMode: WaitForFirstConsumer
+---
+# Создать два PV типа local с привязкой на разные узлы кластера
+apiVersion: v1 
+kind: PersistentVolume 
+metadata: 
+  name: pv-node1 
+spec: 
+  capacity: 
+    storage: 256Mi 
+  volumeMode: Filesystem 
+  accessModes: 
+    - ReadWriteOnce 
+  storageClassName: storage 
+  local: 
+    path: /tmp/data_node1
+  nodeAffinity: 
+    required: 
+      nodeSelectorTerms: 
+      - matchExpressions: 
+        - key: kubernetes.io/hostname 
+          operator: In 
+          values: 
+          - kind-worker
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv-node2
+spec:
+  capacity:
+    storage: 256Mi 
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: storage
+  local:
+    path: /tmp/data_node2
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+      - matchExpressions:
+        - key: kubernetes.io/hostname
+          operator: In
+          values:
+          - kind-worker2
